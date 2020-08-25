@@ -10,6 +10,12 @@ import org.slf4j.LoggerFactory;
 import java.net.URISyntaxException;
 import java.util.List;
 
+
+/**
+ * 注意：
+ * 当更换域名时，需要去：WssNotificationHandle 类里面将 addAuth() 方法里的域名一起更换掉。
+ * as.createSignature(accessKey, secretKey, "GET", "api.hbdm.com", "/option-notification", map);
+ */
 public class WssNotificationSubTest {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
