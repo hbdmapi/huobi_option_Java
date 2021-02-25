@@ -36,8 +36,7 @@ public interface AccountAPIService {
     OptionMasterSubTransferRecordResponse getOptionMasterSubTransferRecordResponse(OptionMasterSubTransferRecordRequest request);//获取母账户下的所有母子账户划转记录
 
     OptionApiTradingStatusResponse getOptionApiTradingStatusResponse();//获取用户API指标禁用信息
-    //2获取合约资产接口结束
 
-
+    OptionBalanceValuationResponse getOptionBalanceValuation(String ValuationAsset);
 
 }

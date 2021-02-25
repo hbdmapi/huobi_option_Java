@@ -19,8 +19,9 @@ import java.util.List;
 public class WssNotificationSubTest {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
-    private String URL = "wss://api.hbdm.com/option-notification";//订单推送访问地址
-    WssNotificationHandle wssNotificationHandle = new WssNotificationHandle(URL, "", "");
+    private String host = "api.hbdm.vn";
+    private String url = "/option-notification";//注意前面一定要带上"/"
+    WssNotificationHandle wssNotificationHandle = new WssNotificationHandle(host, url, "", "");
 
 
     @Test

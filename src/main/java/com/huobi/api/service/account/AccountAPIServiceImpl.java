@@ -364,5 +364,22 @@ public class AccountAPIServiceImpl implements AccountAPIService {
         throw new ApiException(body);
     }
 
-
+    @Override
+    public OptionBalanceValuationResponse getOptionBalanceValuation(String ValuationAsset) {
+        String body;
+        try{
+            Map<String,Object> params=new HashMap<>();
+            if(StringUtils.isNotEmpty(ValuationAsset)){
+                params.put("trade_partition",ValuationAsset.toUpperCase());
+            }
+            body=HbdmHttpClient.getInstance().doPost(api_key,secret_key,url_prex+HuobiFutureAPIOptions.OPTION_BALANCE_VALUATION,params);
+            OptionBalanceValuationResponse response=JSON.parseObject(body,OptionBalanceValuationResponse.class);
+            if("ok".equalsIgnoreCase(response.getStatus())){
+                return response;
+            }
+        }catch(Exception e){
+            throw new ApiException(e);
+        }
+        throw new ApiException(body);
+    }
 }

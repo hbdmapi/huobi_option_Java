@@ -37,6 +37,7 @@ public class HuobiFutureAPIOptions {
     public static final String OPTION_MASTER_SUB_TRANSFER="/option-api/v1/option_master_sub_transfer";//母子账户划转
     public static final String OPTION_MASTER_SUB_TRANSFER_RECORD="/option-api/v1/option_master_sub_transfer_record";//获取母账户下的所有母子账户划转记录
     public static final String OPTION_API_TRADING_STATUS="/option-api/v1/option_api_trading_status";//获取用户API指标禁用信息
+    public static final String OPTION_BALANCE_VALUATION = "/option-api/v1/option_balance_valuation"; // 获取账户总资产估值
 
     //合约交易接口
     public static final String OPTION_ORDER = "/option-api/v1/option_order"; // 1.合约下单

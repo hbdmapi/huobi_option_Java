@@ -140,4 +140,10 @@ public class AccountAPITest implements BaseTest {
         logger.debug("14.获取用户API指标禁用信息：{}", JSON.toJSONString(response));
     }
 
+    @Test
+    public void getOptionBalanceValuation(){
+        OptionBalanceValuationResponse response=huobiAPIService.getOptionBalanceValuation("");
+        logger.debug("15.获取账户总资产估值：{}", JSON.toJSONString(response));
+    }
+
 }
